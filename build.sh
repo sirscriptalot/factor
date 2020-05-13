@@ -298,9 +298,12 @@ find_architecture() {
        i86pc) ARCH=x86;;
        amd64) ARCH=x86;;
        ppc64) ARCH=ppc;;
+       aarch64) ARCH=arm;;
        *86) ARCH=x86;;
        *86_64) ARCH=x86;;
        "Power Macintosh") ARCH=ppc;;
+       *) $ECHO "unknown arch: ${uname_m}";
+         exit 123;;
     esac
 }
 
